@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<registration>
+
+	<tool
+			id="e3.evalmanager"
+			title="Formal Evaluation Manager"
+			description="Formal Evaluation Manager"
+			dispatcher="E3"
+			e3Code="evalmanager">
+
+		<!-- only for maintainer types -->
+		<configuration name="functions.require" value="site.upd" /> 
+
+	</tool>
+
+</registration>

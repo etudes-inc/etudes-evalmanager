@@ -1,0 +1,302 @@
+<div class="e3_dialog_header e3_font">Instructions</div>
+<div class="e3_dialog_instructions">
+	<ul>
+		<li style="margin-bottom:4px;">Use AT&amp;S to prepare formal evaluation(s) for distribution.  One evaluation can be used for many sites.</li>
+		<li style="margin-bottom:4px;">In AT&amp;S, prepare a survey set as a "Formal Course Evaluation".  You may set the open and due dates, notify on open setting, and results email address(s).
+		 You may also set these properties when you distribute to course sites.</li>
+		 <li style="margin-bottom:4px;">You may leave the survey unpublished; it will be published when distributed.</li>
+		 <li style="margin-bottom:4px;">Use Preview and Test Drive in AT&amp;S to make sure your evaluations are ready.</li>
+		 <li>Click on <img src="/evalmanager/icons/transmit_go.png" /> in the list below to distribute a formal evaluation to one or more sites and to add observers.</li>
+	</ul>
+</div>
+<div class="e3_dialog_header e3_font">Distribute Formal Evaluations</div>
+<div class="e3_tool_items">
+	<table id="evalmanager_ready_table" class="e3_tool_item_table e3_sortable_table">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Title</th>
+				<th>Open</th>
+				<th>Due</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>		
+</div>
+<div class="e3_dialog_header e3_font" style="margin-top:20px;">Established Formal Evaluations</div>
+<div class="e3_tool_actions" style="line-height:34px;">
+	Term: <select id="evalmanager_current_term" size="1"></select>
+	<div style="margin-right:20px; display:inline-block; float:right;">
+		<a id="evalmanager_export" class="e3_toolUiLink" href="" target="_blank"><img style="vertical-align:text-bottom; padding-right:0.3em; border-style: none;" src="/evalmanager/icons/import_export.png">Export</a>
+	</div>
+</div>
+<div class="e3_tool_items">
+	<table id="evalmanager_evals_table" class="e3_tool_item_table e3_sortable_table">
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Site</th>
+				<th>Observers</th>
+				<th></th>
+				<th></th>
+				<th>Title</th>
+				<th>Dates</th>
+				<th></th>
+				<th>Results</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</div>
+
+<div id="evalmanager_distribute_dialog" title="Distribute Formal Evaluation">
+	<div class="e3_dialog_instructions e3_wide"> 
+		Select the course site(s) where you want to distribute &quot;<span id="evalmanager_distribute_title"></span>&quot; then click &quot;Continue&quot;
+		<p style="margin-left:30px;">Note: Course sites with formal evaluations are not included.
+	</div>
+	<div class="e3_dialog_section">
+		<div class="e3_tool_actions" style="line-height:36px;">
+			Term: <select id="evalmanager_distribute_dialog_term" size="1"></select>
+			Subject: <select id="evalmanager_distribute_dialog_subject" size="1"></select>
+			Title: <input id="evalmanager_distribute_dialog_site" type="text" size="32" />
+			<a class="e3_toolUiLink" title="Search" href="" id="evalmanager_distribute_dialog_serach"><img src="support/icons/magnifier.png" /></a>
+		</div>
+		<table id="evalmanager_distribute_dialog_sites_table" class="e3_tool_item_table">
+		<thead>
+			<tr>
+				<th><input class="selectAll" type="checkbox" oid="selectSite" /></th>
+				<th>Title</th>
+				<th>Instructors</th>
+				<th>Term</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+		</table>		
+	</div>		
+</div>
+
+<div id="evalmanager_review_dialog" title="Review Distribution">
+	<div class="e3_dialog_instructions e3_wide"> 
+		Distribute &quot;<span id="evalmanager_review_title"></span>&quot; to these course sites:
+		<ul style="overflow-y:auto; overflow-x:hidden; max-height:400px;" id="evalmanager_review_sites"></ul>
+		Using the following settings:
+	</div>
+	<div class="e3_configure_set">
+		<div class="e3_configure_set_row">
+			<div class="e3_configure_set_entry_header">Title:</div>
+			<div class="e3_configure_set_entry_field"><input id="evalmanager_review_asTitle" type="text" size="64" /></div>
+		</div>
+	</div>
+	<div style="display:table">
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Open Date
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_review_opendate" type="text" />
+				</div>
+			</div>
+		</div>
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Due Date
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_review_duedate" type="text" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<input id="evalmanager_review_notify" type="checkbox" /><label for="evalmanager_review_notify">Notify students when evaluation opens</label>	
+	<div class="e3_configure_set_row">
+		<div class="e3_configure_set_entry_header">Email Results To:</div>
+		<div class="e3_configure_set_entry_field"><input id="evalmanager_review_asEmail" type="text" size="64" /></div>
+	</div>
+	<div class="e3_dialog_header e3_font" style="margin-top:20px;">Official Observers</div>
+	<div class="e3_dialog_instructions e3_wide">Enter the college ID number for each official observer you want in the course site(s).<br />Separate multiple observers with a comma.  Text in &lt;&gt; will be ignored.</div>
+	<div><input id="evalmanager_review_observers" type="text" size="100" /></div>
+	<div style="display:table">
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Starting
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_review_startdate" type="text" />
+				</div>
+			</div>
+		</div>
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Ending
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_review_enddate" type="text" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="evalmanager_edit_dialog" title="Edit Distributed Evaluation">
+	<div class="e3_dialog_instructions e3_wide"> 
+	</div>
+	<div class="e3_configure_set">
+		<div class="e3_configure_set_row">
+			<div class="e3_configure_set_entry_header">Site:</div>
+			<div class="e3_configure_set_entry_field" id="evalmanager_edit_site"></div>
+		</div>
+		<div class="e3_configure_set_row">
+			<div class="e3_configure_set_entry_header">Title:</div>
+			<div class="e3_configure_set_entry_field"><input id="evalmanager_edit_title" type="text" size="64" /></div>
+		</div>
+	</div>
+	<div style="display:table">
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Open Date
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_edit_opendate" type="text" />
+				</div>
+			</div>
+		</div>
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Due Date
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_edit_duedate" type="text" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<input id="evalmanager_edit_notify" type="checkbox" /><label for="evalmanager_edit_notify">Notify students when evaluation opens</label>
+	<div class="e3_configure_set_row">
+		<div class="e3_configure_set_entry_header">Email Results To:</div>
+		<div class="e3_configure_set_entry_field"><input id="evalmanager_edit_email" type="text" size="64" /></div>
+	</div>
+	<div class="e3_dialog_header e3_font" style="margin-top:20px;">Official Observers</div>
+	<div class="e3_dialog_instructions e3_wide">Enter the college ID number for each official observer you want in the course site(s).<br />Separate multiple observers with a comma.  Text in &lt;&gt; will be ignored.</div>
+	<div><input id="evalmanager_edit_observers" type="text" size="100" /></div>
+	<div style="display:table">
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Starting
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_edit_startdate" type="text" />
+				</div>
+			</div>
+		</div>
+		<div style="display:table-cell">
+			<div class="e3_stacked_edit" style="margin-right:12px;">
+				<div class="e3_stacked_edit_header_no_icon">
+					Ending
+				</div>
+				<div class="e3_stacked_edit_field">
+					<input class="e3_datetime_input" id="evalmanager_edit_enddate" type="text" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- retract confirm dialog -->
+<div id="evalmanager_confirmRetract" title="Confirm Retract Formal Evaluation" style="display: none;">
+	<div class="e3_dialog_instructions e3_wide"> 
+	</div>
+	Are you sure you want to retract evaluation &quot;<span id="evalmanager_confirmRetract_title"></span>&quot;?
+	<p>It will no longer be available in &quot;<span id="evalmanager_confirmRetract_site"></span>&quot;.
+	<div id="evalmanager_confirmRetract_live">
+		Note: Submissions have been made.
+		<ul>
+			<li>The formal evaluation will be archived, and the existing submissions preserved.</li>
+			<li>While archived, no new submissions will be accepted.</li>
+			<li>Results will not be sent when the formal evaluation closes, if still archived.</li>
+		</ul>
+	</div>
+</div>
+
+<div id="evalmanager_confirmRestore" title="Confirm Restore Formal Evaluation" style="display: none;">
+	<div class="e3_dialog_instructions e3_wide"> 
+	</div>
+	Are you sure you want to restore evaluation &quot;<span id="evalmanager_confirmRestore_title"></span>&quot;?
+	<ul>
+		<li>It will once again be open for submissions in course site &quot;<span id="evalmanager_confirmRestore_site"></span>&quot;.</li>
+		<li>Existing submissions will be restored.</li>
+		<li>Results will be sent when the formal evaluation closes.</li>
+	</ul>
+</div>
+
+<!-- resend confirm dialog -->
+<div id="evalmanager_confirmResend" title="Confirm Resend Results" style="display: none;">
+	<div class="e3_dialog_instructions e3_wide"> 
+	</div>
+	Are you sure you want to resend the results of evaluation &quot;<span id="evalmanager_confirmResend_title"></span>&quot; in site &quot;<span id="evalmanager_confirmResend_site"></span>&quot;?
+	<p>They will be emailed to &quot;<span id="evalmanager_confirmResend_email"></span>&quot;.
+</div>
+
+<div id="evalmanager_alertInvalid" title="Invalid Settings" style="display: none;">
+	The Formal Evaluation could not be distributed.  Check your settings:
+	<ul>
+		<li>Make sure you have a valid email address, or multiple valid addresses separated by commas</li>
+		<li>Make sure your open date (if specified) is before your due date.</li>
+	</ul>
+</div>
+
+<div id="evalmanager_alertInvalidObserver" title="Invalid Observer ID" style="display: none;">
+	The following ID value(s) for your course site observers are not found:
+	<ul>
+		<li id="evalmanager_alertInvalidObserverIids"></li>
+	</ul>
+	If you need help adding a new observer, contact Etudes support.
+</div>
+
+<div id="evalmanager_alertSelectSite" title="Select Site(s)" style="display: none;">
+	Select one or more course sites before pressing "Continue".
+</div>
+
+<div id="evalmanager_alertInvalidTitle" title="Provide a Title" style="display: none;">
+	The Formal Evaluation must have a title.
+</div>
+
+<div id="evalmanager_alertInvalidNotify" title="Provide an Open Date for Notify" style="display: none;">
+	The Formal Evaluation must have an open date to use the notify option.
+</div>
+
+<div id="evalmanager_alertInvalidEmail" title="Provide an Email Address" style="display: none;">
+	The Formal Evaluation must have one or more email address(s) for reporting (separate multiple addresses with a comma).
+</div>
+
+<div id="evalmanager_alertInvalidDueDate" title="Provide a Due Date" style="display: none;">
+	The Formal Evaluation must have a due date.
+</div>
+
+<div id="evalmanager_alertSaved" title="Formal Evaluation Updated" style="display: none;">
+	Your changes have been saved for &quot;<span id="evalmanager_alertSavedTitle"></span>&quot; in course site &quot;<span id="evalmanager_alertSavedSite"></span>&quot;.
+</div>
+
+<div id="evalmanager_alertRetracted" title="Formal Evaluation Retracted" style="display: none;">
+	Formal evaluation &quot;<span id="evalmanager_alertRetractedTitle"></span>&quot; in course site &quot;<span id="evalmanager_alertRetractedSite"></span>&quot; has been retracted.
+</div>
+
+<div id="evalmanager_alertRestored" title="Formal Evaluation Restored" style="display: none;">
+	Formal evaluation &quot;<span id="evalmanager_alertRestoredTitle"></span>&quot; in course site &quot;<span id="evalmanager_alertRestoredSite"></span>&quot; has been restored.
+</div>
+
+<div id="evalmanager_alertDistributed" title="Formal Evaluation Distributed" style="display: none;">
+	Formal evaluation &quot;<span id="evalmanager_alertDistributedTitle"></span>&quot; has been distributed to course sites:
+	<ul style="overflow-y:auto; overflow-x:hidden; max-height:400px;" id="evalmanager_alertDistributedSites"></ul>
+</div>
